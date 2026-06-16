@@ -1,25 +1,25 @@
 class Jjwt < Formula
   desc "jujutsu-backed worktrunk-compatible workspace manager"
   homepage "https://github.com/endoze/jjwt"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/endoze/jjwt/releases/download/v0.1.1/jjwt-aarch64-apple-darwin.tar.xz"
-      sha256 "4932237e807b04611a6c0ceddb70bf170b37d0397acde26608e475b75a929f87"
+      url "https://github.com/endoze/jjwt/releases/download/v0.1.2/jjwt-aarch64-apple-darwin.tar.xz"
+      sha256 "5efbc24e3b195a5e1ee97925974c780c892d73c778058f8308f0c4b5c67eb979"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/endoze/jjwt/releases/download/v0.1.1/jjwt-x86_64-apple-darwin.tar.xz"
-      sha256 "59dbe443fb20bf7fecd97dd250dc4c4262beaf032ebdab81d533e882e7e72e8e"
+      url "https://github.com/endoze/jjwt/releases/download/v0.1.2/jjwt-x86_64-apple-darwin.tar.xz"
+      sha256 "715b7eee956c3339b03ffa37548aa5a391e70f1c02e31cc4d93d4bbed0082d87"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/endoze/jjwt/releases/download/v0.1.1/jjwt-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b0cd690889fccc6167b9347c2b7e26eaca4eb50c2e8d0721bb3602583b2fa158"
+      url "https://github.com/endoze/jjwt/releases/download/v0.1.2/jjwt-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7772158cf2909a97e17688f129373dc1215132f25f1fc857bf5c87ac1de7884f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/endoze/jjwt/releases/download/v0.1.1/jjwt-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fc17273cba5929c0ce4435526a9fb4969759607cb4c5f65296e3df93a72448d1"
+      url "https://github.com/endoze/jjwt/releases/download/v0.1.2/jjwt-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "60efb86bda890aace8d478d7b2910bc0948ed66e2610bf5b0e922a6e471da511"
     end
   end
   license "MIT"
