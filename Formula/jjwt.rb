@@ -1,25 +1,25 @@
 class Jjwt < Formula
   desc "jujutsu-backed worktrunk-compatible workspace manager"
   homepage "https://github.com/endoze/jjwt"
-  version "0.1.2"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/endoze/jjwt/releases/download/v0.1.2/jjwt-aarch64-apple-darwin.tar.xz"
-      sha256 "5efbc24e3b195a5e1ee97925974c780c892d73c778058f8308f0c4b5c67eb979"
+      url "https://github.com/endoze/jjwt/releases/download/v0.2.0/jjwt-aarch64-apple-darwin.tar.xz"
+      sha256 "e6c2ab6d61535b82c69d105a85bfdf00a1b8b3732a1a4f9f5e0cf6852399976e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/endoze/jjwt/releases/download/v0.1.2/jjwt-x86_64-apple-darwin.tar.xz"
-      sha256 "715b7eee956c3339b03ffa37548aa5a391e70f1c02e31cc4d93d4bbed0082d87"
+      url "https://github.com/endoze/jjwt/releases/download/v0.2.0/jjwt-x86_64-apple-darwin.tar.xz"
+      sha256 "ae49f62138212b49825b607fa1bb4400179e2216fd85064d4ce1e27869fe6ddb"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/endoze/jjwt/releases/download/v0.1.2/jjwt-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7772158cf2909a97e17688f129373dc1215132f25f1fc857bf5c87ac1de7884f"
+      url "https://github.com/endoze/jjwt/releases/download/v0.2.0/jjwt-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "07809c9c4eb676630df415ba47cfca33691f35a0488e228e1f17d6520b34c1de"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/endoze/jjwt/releases/download/v0.1.2/jjwt-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "60efb86bda890aace8d478d7b2910bc0948ed66e2610bf5b0e922a6e471da511"
+      url "https://github.com/endoze/jjwt/releases/download/v0.2.0/jjwt-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ee7cc7f14b1222dfa70efc5878cdee0d0764e6fe12e324fe0f65d14bf8afbcbf"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Jjwt < Formula
   end
 
   def install
-    bin.install "jjwt" if OS.mac? && Hardware::CPU.arm?
-    bin.install "jjwt" if OS.mac? && Hardware::CPU.intel?
-    bin.install "jjwt" if OS.linux? && Hardware::CPU.arm?
-    bin.install "jjwt" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "jjwt"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "jjwt"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "jjwt"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "jjwt"
+    end
 
     install_binary_aliases!
 
